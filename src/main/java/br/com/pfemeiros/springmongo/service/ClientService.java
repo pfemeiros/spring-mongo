@@ -22,4 +22,16 @@ public class ClientService {
     public Client getById(String id) {
         return clientRepository.findById(id).orElse(null);
     }
+
+    public Client save(Client client) {
+        return clientRepository.save(client);
+    }
+
+    public Client update(Client client) {
+        return clientRepository.save(client);
+    }
+
+    public void delete(String id) {
+        clientRepository.deleteById(id);
+    }
 }
